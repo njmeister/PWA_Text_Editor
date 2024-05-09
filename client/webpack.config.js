@@ -21,6 +21,7 @@ module.exports = () => {
 		new HtmlWebpackPlugin({
 			template: './index.html',
 			title: 'Webpack Plugin',
+			favicon: './favicon.ico',
 		}),
 		new WebpackPwaManifest({
 			name: 'Text Editor',
@@ -32,8 +33,9 @@ module.exports = () => {
 			publicPath: '/',
 			icons: [
 			  {
-				src: path.resolve('assets/icons/favicon.ico'),
+				src: path.resolve('src/images/logo.png'),
 				sizes: [96, 128, 192, 256, 384, 512],
+				destination: path.join('assets', 'icons'),
 			  },
 			],
 		}),
