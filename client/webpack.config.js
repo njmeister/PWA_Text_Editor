@@ -38,6 +38,7 @@ module.exports = () => {
 				destination: path.join('assets', 'icons'),
 			  },
 			],
+			filenameHashing: false,
 		}),
     	new InjectManifest({
 			swSrc: './src-sw.js',
